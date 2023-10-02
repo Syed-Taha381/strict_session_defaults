@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "creation": "2022-04-04 04:04:04.119400",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "is_enabled",
+  "fields_section",
+  "reqd_fields",
+  "visibility_section",
+  "hidden_from_listed_roles",
+  "roles",
+  "hidden_from_listed_users",
+  "users",
+  "visibility_column",
+  "visibility_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Is Enabled",
+   "default": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fields_section",
+   "fieldtype": "Section Break",
+   "label": "Fields"
+  },
+  {
+   "fieldname": "reqd_fields",
+   "fieldtype": "Small Text",
+   "label": "Required Fields",
+   "description": "Add every required fieldname in a separate line"
+  },
+  {
+   "fieldname": "visibility_section",
+   "fieldtype": "Section Break",
+   "label": "Visibility"
+  },
+  {
+   "fieldname": "hidden_from_listed_roles",
+   "fieldtype": "Check",
+   "label": "Hidden From Listed Roles"
+  },
+  {
+   "fieldname": "roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Roles",
+   "options": "Strict Session Defaults Has Role"
+  },
+  {
+   "fieldname": "hidden_from_listed_users",
+   "fieldtype": "Check",
+   "label": "Hidden From Listed Users"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table MultiSelect",
+   "label": "Users",
+   "options": "Strict Session Defaults Has User"
+  },
+  {
+   "fieldname": "visibility_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visibility_note",
+   "fieldtype": "HTML",
+   "label": "",
+   "options": "The visibility of the <code>Session Defaults Popup</code> will be decided as follows:\n<ol>\n<li>If the logged-in user is listed in the <code>Users</code> field then the value of <code>Hidden From Listed Users</code> will decide the visibility of the popup.</li>\n<li>Else, If the logged-in user has any of the listed <code>Roles</code> field then the value of <code>Hidden From Listed Roles</code> will decide the visibility of the popup.</li>\n</ol>",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-cog",
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-04-04 04:04:04.119400",
+ "modified_by": "Administrator",
+ "module": "Strict Session Defaults",
+ "name": "Strict Session Defaults Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
